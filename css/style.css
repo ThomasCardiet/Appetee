@@ -20,7 +20,7 @@ body {
 header {
     padding-top: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 #logo {
@@ -29,8 +29,10 @@ header {
 }
 
 #links {
-    width: 70%;
+    width: 60%;
     margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #links > a {
@@ -39,7 +41,6 @@ header {
     font-size: 1.5em;
     font-family: var(--font);
     font-weight: 400;
-    margin: 3%;
 }
 
 #links > a:hover {
@@ -61,14 +62,20 @@ header {
     text-decoration: none;
     color: white;
     font-family: "Poppins", sans-serif;
+    height: 25px;
 }
 
 /* FIND MERCHANTS SECTION */
 #find-merchants {
-    margin-top: 50px;
-    background: url("../img/iphone.png") no-repeat top 0 right 20%;
-    background-size: 45%;
-    padding-bottom: 140px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#phone-img {
+    max-width: 40%;
+    object-fit: contain;
+    margin-left: -10%;
 }
 
 #find-merchants > div {
@@ -94,26 +101,25 @@ header {
 /* TASTES SECTION */
 #tastes {
     margin-top: 100px;
-    padding: 250px 0 350px 0;
+    padding: 250px 0 700px 0;
     background: url("../img/tastes_background.png") no-repeat right -100% top 0;
     background-size: 80%;
     display: flex;
+    justify-content: space-around;
 }
 
 #social_card {
-    background: url("../img/social_card.png") no-repeat;
-    background-size: 100%;
-    height: 800px;
-    width: 50%;
+    max-width: 50%;
     margin-top: -220px;
+    object-fit: contain;
 }
 
 #tastes-right {
-    width: 55%;
+    width: 45%;
 }
 
 #tastes-right > h2 {
-    width: 80%;
+    width: 85%;
     font-family: var(--font);
     font-weight: 400;
     font-size: 3em;
@@ -121,7 +127,7 @@ header {
 
 #tastes-right > p {
     font-family: var(--font);
-    width: 60%;
+    width: 65%;
     margin: 50px 0;
     font-size: 1.5em;
     color: #575757;
@@ -144,13 +150,13 @@ header {
 
 /* Number Section */
 #number {
-    margin-top: 100px;
+    margin-top: -150px;
     display: flex;
     justify-content: space-evenly;
 }
 
 #number-left {
-    width: 60%;
+    width: 50%;
     float: left;
 }
 
@@ -178,26 +184,21 @@ header {
 }
 
 #number-img {
-    background: url("../img/number_img.png") no-repeat;
-    background-size: 100%;
-    height: 200px;
-    width: 20%;
-    margin-top: 100px;
+    max-width: 18%;
+    object-fit: contain;
+    z-index: -1;
 }
 
 /* Balanced Section */
 #balanced {
     margin-top: 250px;
-    padding-bottom: 200px;
-    background: url("../img/balanced_img.png") no-repeat left -15% top 0;
-    background-size: 50%;
-    height:650px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #balanced-right {
     width: 45%;
     padding-top: 150px;
-    margin-left: 55%;
 }
 
 #balanced-right > h2 {
@@ -217,6 +218,12 @@ header {
 
 #balanced-right > p > span {
     font-weight: 700;
+}
+
+#balanced-img {
+    max-width: 50%;
+    margin-left: -200px;
+    object-fit: contain;
 }
 
 #balanced-right > .btn {
@@ -255,10 +262,8 @@ header {
 }
 
 #contact-img {
-    background: url("../img/contact_img.png") no-repeat top 0 right 0;
-    background-size: 100%;
-    height: 800px;
-    width: 40%;
+    max-width: 40%;
+    object-fit: contain;
 }
 
 /* FOOTER */
@@ -316,4 +321,10 @@ footer {
     position: absolute;
     bottom: 40px;
     width: 100%;
+}
+
+@media screen and (min-width: 1100px) {
+    footer {
+        background-size: 100% 1300px;
+    }
 }
