@@ -1,0 +1,319 @@
+:root {
+    --red: #ED616F;
+    --green: #B1D78A;
+    --grey: #8A807F;
+
+    --font: "Poppins", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../img/header_background.png") no-repeat;
+    background-size: 100%;
+}
+
+/* HEADER */
+header {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#logo {
+    max-width: 15%;
+    object-fit: contain;
+}
+
+#links {
+    width: 70%;
+    margin-top: 35px;
+}
+
+#links > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-family: var(--font);
+    font-weight: 400;
+    margin: 3%;
+}
+
+#links > a:hover {
+    cursor: pointer;
+}
+
+#links > a.active {
+    font-weight: 700;
+}
+
+#links > a.btn {
+    font-size: 1.1em;
+}
+
+.btn {
+    padding: 10px 15px;
+    background: linear-gradient(#A4D38F, #21B897);
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+/* FIND MERCHANTS SECTION */
+#find-merchants {
+    margin-top: 50px;
+    background: url("../img/iphone.png") no-repeat top 0 right 20%;
+    background-size: 45%;
+    padding-bottom: 140px;
+}
+
+#find-merchants > div {
+    width: 40%;
+    padding: 180px 0 0 12%;
+    font-family: var(--font);
+}
+
+#find-merchants > div > h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+#find-merchants > div > h1 > span {
+    font-weight: 700;
+}
+
+#find-merchants > div > a.btn {
+    font-size: 1.8em;
+}
+
+/* TASTES SECTION */
+#tastes {
+    margin-top: 100px;
+    padding: 250px 0 350px 0;
+    background: url("../img/tastes_background.png") no-repeat right -100% top 0;
+    background-size: 80%;
+    display: flex;
+}
+
+#social_card {
+    background: url("../img/social_card.png") no-repeat;
+    background-size: 100%;
+    height: 800px;
+    width: 50%;
+    margin-top: -220px;
+}
+
+#tastes-right {
+    width: 55%;
+}
+
+#tastes-right > h2 {
+    width: 80%;
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 3em;
+}
+
+#tastes-right > p {
+    font-family: var(--font);
+    width: 60%;
+    margin: 50px 0;
+    font-size: 1.5em;
+    color: #575757;
+}
+
+#tastes-right > p > span {
+    font-weight: 700;
+}
+
+#tastes-right > .btn {
+    font-size: 1.6em;
+}
+
+.outlined {
+    font-weight: 700;
+    text-decoration:underline;
+    text-decoration-style: dashed;
+    text-decoration-color: #EC535F;
+}
+
+/* Number Section */
+#number {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#number-left {
+    width: 60%;
+    float: left;
+}
+
+#number-left > h2 {
+    width: 80%;
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 3em;
+}
+
+#number-left > p {
+    font-family: var(--font);
+    width: 65%;
+    margin: 50px 0;
+    font-size: 1.5em;
+    color: #575757;
+}
+
+#number-left > p > span, #number-left > h2 > span {
+    font-weight: 700;
+}
+
+#number-left > .btn {
+    font-size: 1.6em;
+}
+
+#number-img {
+    background: url("../img/number_img.png") no-repeat;
+    background-size: 100%;
+    height: 200px;
+    width: 20%;
+    margin-top: 100px;
+}
+
+/* Balanced Section */
+#balanced {
+    margin-top: 250px;
+    padding-bottom: 200px;
+    background: url("../img/balanced_img.png") no-repeat left -15% top 0;
+    background-size: 50%;
+    height:650px;
+}
+
+#balanced-right {
+    width: 45%;
+    padding-top: 150px;
+    margin-left: 55%;
+}
+
+#balanced-right > h2 {
+    width: 80%;
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 3em;
+}
+
+#balanced-right > p {
+    font-family: var(--font);
+    width: 70%;
+    margin: 50px 0 20px 0;
+    font-size: 1.5em;
+    color: #575757;
+}
+
+#balanced-right > p > span {
+    font-weight: 700;
+}
+
+#balanced-right > .btn {
+    font-size: 1.4em;
+}
+
+/* Contact Section */
+#contact {
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contact-left {
+    padding-top: 120px;
+    width: 40%;
+}
+
+#contact-left > h2 {
+    width: 80%;
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 3em;
+}
+
+#contact-left > p {
+    font-family: var(--font);
+    width: 70%;
+    margin: 50px 0;
+    font-size: 1.5em;
+    color: #575757;
+}
+
+#contact-left > p > span {
+    font-weight: 700;
+}
+
+#contact-img {
+    background: url("../img/contact_img.png") no-repeat top 0 right 0;
+    background-size: 100%;
+    height: 800px;
+    width: 40%;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 100px;
+    padding: 200px 0 280px 0;
+    background: url("../img/footer_background.png") no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#footer-top {
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer-top > img {
+    max-width: 35%;
+    object-fit: contain;
+}
+
+#footer-right {
+    width: 35%;
+}
+
+#footer-right > h2 {
+    margin: 50px 0;
+    text-align: left;
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 3.5em;
+}
+
+#footer-right > img {
+    max-width: 100%;
+}
+
+#footer-logo {
+    display: block;
+    margin: auto;
+}
+
+#footer-socials {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+#legal {
+    text-align: center;
+    color: white;
+    font-family: var(--font);
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+}
