@@ -2,6 +2,7 @@ var button = document.querySelector('#hamburger-button');
 var overlay = document.querySelector('#hamburger-overlay');
 var activatedClass = 'hamburger-activated';
 
+// activation / désactivation du menu burger lors du clique sur le bouton
 button.addEventListener('click', function(e) {
     e.preventDefault();
     if(this.parentNode.classList.contains(activatedClass)) {
@@ -13,6 +14,7 @@ button.addEventListener('click', function(e) {
     }
 });
 
+// activation / désactivation du menu burger lors avec touche échap
 button.addEventListener('keydown', function (e) {
     if(this.parentNode.classList.contains(activatedClass)) {
         if(e.repeat === false && e.which === 27) {
@@ -22,12 +24,14 @@ button.addEventListener('keydown', function (e) {
     }
 });
 
+// désactivation du menu burger lors du clique sur l'overlay
 overlay.addEventListener('click', function (e) {
     e.preventDefault();
     this.parentNode.classList.remove(activatedClass);
     button.style.position = "absolute";
 });
 
+// Partie responsive
 function resize() {
 
     var ipad_match = window.matchMedia("(max-width: 1024px)").matches;
@@ -99,4 +103,6 @@ function resize() {
 }
 
 resize();
+
+// appel de resize() lors de la redimension de la page
 window.addEventListener('resize', resize, false);
