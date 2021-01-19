@@ -1,20 +1,53 @@
+var button = document.querySelector('#hamburger-button');
+var overlay = document.querySelector('#hamburger-overlay');
+var activatedClass = 'hamburger-activated';
+
+button.addEventListener('click', function(e) {
+    e.preventDefault();
+    if(this.parentNode.classList.contains(activatedClass)) {
+        this.parentNode.classList.remove(activatedClass);
+        button.style.position = "absolute";
+    }else {
+        this.parentNode.classList.add(activatedClass);
+        button.style.position = "fixed";
+    }
+});
+
+button.addEventListener('keydown', function (e) {
+    if(this.parentNode.classList.contains(activatedClass)) {
+        if(e.repeat === false && e.which === 27) {
+            this.parentNode.classList.remove(activatedClass);
+            button.style.position = "absolute";
+        }
+    }
+});
+
+overlay.addEventListener('click', function (e) {
+    e.preventDefault();
+    this.parentNode.classList.remove(activatedClass);
+    button.style.position = "absolute";
+});
+
 function resize() {
 
-    var ipad_match_rotate = window.matchMedia("(max-width: 1024px)").matches;
+    var ipad_match = window.matchMedia("(max-width: 1024px)").matches;
     let footer = $("footer");
     let footer_logo = $("#footer-logo");
     let footer_right = $("#footer-right");
     let footer_downloads = $("#footer-downloads");
-    if (ipad_match_rotate) {
+    if (ipad_match) {
         footer[0].style.backgroundImage = "url('img/footer_background_responsive.png')";
         footer_logo[0].src = "img/footer_logo_responsive.png";
         footer_right[0].removeChild(footer_downloads[0]);
         footer_right[0].appendChild(footer_downloads[0]);
     }
 
-    var iphone_match_rotate = window.matchMedia("(max-width: 414px)").matches;
+    var iphone_match = window.matchMedia("(max-width: 414px)").matches;
 
     let body = $("body");
+
+    // BURGER
+    let burger_sidebar = $("#hamburger-sidebar");
 
     // HEADER
     let logo = $("#logo");
@@ -38,17 +71,20 @@ function resize() {
     let balanced = $("#balanced");
     let balanced_img = $("#balanced-img");
 
-    if(iphone_match_rotate) {
+    if(iphone_match) {
+
+        // BURGER
+        burger_sidebar[0].appendChild(links[0]);
+        links.children().last().remove();
 
         // HEADER
         body[0].style.backgroundImage = "url('img/header_background_responsive.png')";
-        header[0].removeChild(links[0]);
         header[0].appendChild(slogan);
         logo[0].src = "img/footer_logo_responsive.png";
 
         // FIND MERCHANT
         find_merchants[0].removeChild(phone_img[0]);
-        find_merchants[0].prepend(phone_img[0])
+        find_merchants[0].prepend(phone_img[0]);
 
         // TASTES
         tastes_right[0].style.background = "url('img/tastes_background_responsive.png') no-repeat right 98% top 0";

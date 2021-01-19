@@ -16,11 +16,69 @@ body {
     background-size: 102%;
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 /* HEADER */
+
+    /* BURGER */
+
+#hamburger-button {
+    display: none;
+    cursor: pointer;
+    border: none;
+    font-size: 3em;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: -8px;
+    text-align: center;
+    background: transparent;
+    color: white;
+    width: 14%;
+    z-index: 12;
+    overflow: hidden;
+    outline: none;
+}
+
+#hamburger-overlay {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+}
+
+#hamburger-sidebar {
+    display: none;
+    background: url("../img/burger_background.png") no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 80%;
+    z-index: 11;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(-100%);
+    transition: transform .2s ease-out;
+}
+
+#hamburger-sidebar-logo {
+    position: absolute;
+    bottom: 15px;
+    max-width: 35%;
+    left: 14%;
+}
+
 header {
     padding-top: 50px;
     display: flex;
     justify-content: space-evenly;
+    position: relative;
 }
 
 #logo {
@@ -570,6 +628,33 @@ footer {
 /* MOBILE */
 
 @media screen and (max-width: 414px) {
+
+    /* BURGER */
+
+    .header_bot_logo_link, .header_links_icon, .header_links, .sticky_menu_logo {
+        display: none;
+    }
+
+    #hamburger-button, #hamburger-sidebar, .hamburger-activated #hamburger-overlay {
+        display: block;
+    }
+
+    .hamburger-activated #hamburger-sidebar {
+        transform: translateX(0);
+    }
+
+    #links {
+        width: 80%;
+        display: block;
+        flex-wrap: unset;
+        margin: 90px auto 0 auto;
+    }
+
+    #links > a {
+        font-size: 2em;
+        display: block;
+        margin-bottom: 18px;
+    }
 
     /* HEADER */
     header {

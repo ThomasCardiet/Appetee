@@ -16,14 +16,21 @@
 
     <header>
 
+        <!-- BURGER MENU -->
+        <button id="hamburger-button">&#9776;</button>
+        <div id="hamburger-sidebar">
+            <img id="hamburger-sidebar-logo" src="img/footer_logo_responsive.png" alt="">
+        </div>
+        <div id="hamburger-overlay"></div>
+
         <img id="logo" src="img/logo.png" alt="logo Appetee">
 
         <nav id="links">
-            <a class="active" href="">Accueil</a>
-            <a href="">Découvrir</a>
-            <a href="">On s'engage</a>
-            <a href="">Recettes</a>
-            <a href="">Contact</a>
+            <a class="active" href="#find-merchants">Accueil</a>
+            <a href="#tastes">Découvrir</a>
+            <a href="#number">On s'engage</a>
+            <a href="#balanced">Recettes</a>
+            <a href="#contact">Contact</a>
             <a class="btn" href="">Essayez Gratuitement</a>
         </nav>
 
@@ -31,7 +38,8 @@
 
     <main>
 
-        <section id="find-merchants">
+        <!-- Trouver recettes -->
+        <section id="find-merchants" data-spy>
             <div>
                 <h1>Trouver des <span class="outlined">recettes</span>
                     <br>qui sauront plaire à tout
@@ -41,7 +49,8 @@
             <img src="img/iphone.png" id="phone-img" alt="">
         </section>
 
-        <section id="tastes">
+        <!-- Goûts -->
+        <section id="tastes" data-spy>
 
             <img src="img/social_card.png" id="social_card" alt="">
 
@@ -54,7 +63,8 @@
             </div>
         </section>
 
-        <section id="number">
+        <!-- Nombre -->
+        <section id="number" data-spy>
 
             <div id="number-left">
                 <h2>Des plats en fonction <br>du <span class="outlined">nombre de personnes.</span></h2>
@@ -68,7 +78,8 @@
 
         </section>
 
-        <section id="balanced">
+        <!-- Equilibré -->
+        <section id="balanced" data-spy>
 
             <img src="img/balanced_img.png" id="balanced-img" alt="">
 
@@ -82,7 +93,8 @@
 
         </section>
 
-        <section id="contact">
+        <!-- Nous contacter -->
+        <section id="contact" data-spy>
 
             <div id="contact-left">
                 <h2>Vous souhaitez nous <br><span class="outlined">contacter ?</span></h2>
@@ -119,6 +131,7 @@
 
     </footer>
 
+    <script src="js/obs.js"></script>
     <script src="js/responsive.js"></script>
 </body>
 </html>
